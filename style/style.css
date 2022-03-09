@@ -51,6 +51,13 @@ h1 {
     line-height: 65px;
     margin-bottom: 40px;
 }
+h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 65px;
+    margin-bottom: 56px;
+}
 
 ._bounding-container {
     max-width: 1230px;
@@ -99,3 +106,73 @@ h1 {
     height: 464px;
     object-fit: cover;
 }
+
+.skills {
+    background-color: #FAFAFA;
+}
+.skills-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills-body {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 72px;
+}
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 16.66%;
+}
+.skills-column:not(:last-child) {
+    margin-right: 55px;
+}
+.skills-title {
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+.html5-logo {
+    width: 100px;
+    height: 100px;
+}
+.css3-logo {
+    width: 100px;
+    height: 100px;
+}
+.sass-logo {
+    width: 100px;
+    height: 75px;
+}
+.git-logo {
+    width: 120px;
+    height: 50px;
+}
+.javascript-logo {
+    width: 78px;
+    height: 78px;
+}
+.github-logo {
+    width: 100px;
+    height: 100px;
+}
+.skills-title {
+    font-size: 14px;
+    line-height: 16px;
+    color: #3D3B3C;
+}
+.star {
+    width: 26px;
+    height: 26px;
+}
+.-gray-star {
+    fill: #BEBEBE;
+}
+.arrow-down {
+    cursor: pointer;
+    width: 32px;
+    height: 20px;
+}
+
