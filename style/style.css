@@ -44,6 +44,30 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*---------------------------------------------------*/
 
+.-blue-color {
+    color: #10367C
+}
+
+.-black-color {
+    color: #120D0E;
+}
+
+.-dark-gray-color {
+    color: #3D3B3C;
+}
+
+.-gray-color {
+    color: #BEBEBE;
+}
+
+.-white-color {
+    color: #FFFFFF;
+}
+
+.-bold {
+    font-weight: 500;
+}
+
 h1 {
     font-weight: 500;
     font-size: 56px;
@@ -63,19 +87,19 @@ h3 {
     color: #120D0E;
     font-weight: 500;
     font-size: 24px;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
 }
 
 ._bounding-container {
     max-width: 1230px;
     margin: 0 auto;
-    padding: 125px 16px;
+    padding: 125px 32px;
 }
 
 ._bounding-container-header {
     max-width: 1230px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 32px;
 }
 
 header {
@@ -106,23 +130,23 @@ header {
     color: #120D0E;
 }
 
-main {
-    padding-top: 100px;
+.about {
+    padding-top: 70px;
 }
-
 .about-body {
     display: flex;
     justify-content: space-between;
 }
 
 .about-info {
-    max-width: 572px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .about-info-text {
     font-size: 22px;
     line-height: 25px;
-    margin-bottom: 72px;
 }
 
 .about-info-text p:not(:last-child) {
@@ -130,6 +154,7 @@ main {
 }
 
 .about-button {
+    display: inline-block;
     background-color: #3A4576;
     padding: 14px 20px;
     text-decoration: none;
@@ -137,9 +162,9 @@ main {
 
 .about-photo {
     display: block;
-    width: 414px;
-    height: 464px;
+    width: 50%;
     object-fit: cover;
+    margin-left: 20px;
 }
 
 .skills {
@@ -165,7 +190,7 @@ main {
     justify-content: end;
     align-items: center;
     width: 16.6666%;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
 }
 
 .skills-icon {
@@ -195,96 +220,18 @@ main {
     transform: rotate(180deg);
 }
 
-
-.work-experience-body {
-    display: flex;
+.work-experience {
+    text-align: center;
+    font-size: 22px;
+    line-height: 25px;
 }
-
-.info-wrap {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.description {
-    display: flex;
-    align-items: center;
-}
-
-.description-info {
-    width: 290px;
-    margin: 16px;
-}
-
-.description-text {
-    font-size: 16px;
-    line-height: 18px;
-    margin-top: 8px;
-}
-
-.date {
-    margin: 16px;
-    font-size: 24px;
-}
-
-.graph-point {
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    width: 12px;
-    height: 12px;
-    background-color: #BEBEBE;
-    border-radius: 50%;
-}
-
-.point-1 {
-    top: 154px;
-    background-color: #3A4576;
-}
-
-.point-2 {
-    top: 314px;
-}
-
-.point-3 {
-    bottom: 154px;
-}
-
-.graph-line {
-    position: relative;
-    width: 1px;
-    height: 640px;
-    background-color: #3D3B3C;
-
+.work-experience h3 {
+    margin-bottom: 20px;
 }
 
 .-activeLink {
     color: #120D0E !important;
     font-weight: bold;
-}
-
-.-blue-color {
-    color: #10367C
-}
-
-.-black-color {
-    color: #120D0E;
-}
-
-.-dark-gray-color {
-    color: #3D3B3C;
-}
-
-.-gray-color {
-    color: #BEBEBE;
-}
-
-.-white-color {
-    color: #FFFFFF;
-}
-
-.-bold {
-    font-weight: 500;
 }
 
 .projects {
@@ -304,6 +251,29 @@ main {
 
 .slide p {
     margin-bottom: 72px;
+}
+
+.education {
+    text-align: center;
+    font-size: 22px;
+    line-height: 25px;
+}
+.education-post:not(:last-child) {
+    margin-bottom: 70px;
+}
+.date {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+.post-text {
+    font-size: 19px;
+    color: #494949;
+}
+.education-post img {
+    width: 80%;
+    margin-top: 20px;
+    border: 1px solid #f1874d;
+    padding: 5px;
 }
 
 .languages {
@@ -356,4 +326,41 @@ main {
     display: block;
     text-decoration: underline;
     color: #000000;
+}
+
+@media (max-width: 1100px) {
+    ._bounding-container {
+        padding: 80px 32px;
+    }
+    header {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    h1 {
+        font-size: 42px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    .about-info-text {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 30px;
+    }
+    .about-photo {
+        width: 45%;
+    }
+    .about-button {
+        font-size: 18px;
+        line-height: 21px;
+        background-color: #3A4576;
+        padding: 10px 15px;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 980px) {
+    .skills-card {
+        width: 25%;
+        min-height: 170px;
+    }
 }

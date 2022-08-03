@@ -14,19 +14,19 @@
     <link rel="stylesheet" href="libs/slick/slick-theme.css"/>
 </head>
 <body>
-<header>
+<header id="header">
     <div class="_bounding-container-header">
         <ul class="header-list"></ul>
     </div>
 </header>
 <main>
-    <section id="about" class="about">
+    <section class="about" id="about">
         <div class="_bounding-container">
             <div class="about-body">
                 <div class="about-info">
-                    <h1 class="-black-color">Artem Litovchenko<br><span class="-gray-color ">Front-end developer</span>
-                    </h1>
                     <div class="about-info-text -dark-gray-color">
+                        <h1 class="-black-color">Artem Litovchenko<br><span
+                                class="-gray-color ">Front-end developer</span></h1>
                         <p>
                             I love learning new technologies
                             purposeful, easy to train, diligent, stress-resistant. Able to learn independently and
@@ -57,41 +57,13 @@
     <section class="work-experience" id="work-experience">
         <div class="_bounding-container">
             <h2>Work experience</h2>
-            <div class="work-experience-body">
-                <div class="info-wrap">
-                    <div class="description">
-                        <div class="description-info">
-                            <h3>"Minsk factory of sparkling wines"</h3>
-                            <p class="description-text -gray-color">Picker</p>
-                        </div>
-                        <div class="date -gray-color">Mar 2021 – till now</div>
-                    </div>
-                </div>
-                <div class="graph-line">
-                    <div class="graph-point point-1"></div>
-                    <div class="graph-point point-2"></div>
-                    <div class="graph-point point-3"></div>
-                </div>
-                <div class="info-wrap">
-                    <div class="description">
-                        <p class="date -blue-color">Oct 2021 – Jul 2022</p>
-                        <div class="description-info">
-                            <h3>Front-end courses "Intellect Fox"</h3>
-                            <p class="description-text -gray-color">
-                                Studied on the course. During my studies,
-                                I created several projects, which can be found in the Projects section.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p class="date -gray-color">Oct 2017 – Oct 2020</p>
-                        <div class="description-info">
-                            <h3>"EVROTORG"</h3>
-                            <p class="description-text -gray-color">Picker</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <p class="date -gray-color">Oct 2021 – Jul 2022</p>
+            <h3>Front-end courses "Intellect Fox"</h3>
+            <p class="post-text -gray-color">
+                I was a student on the course. During my studies, I created several projects, which you can see in the Projects section.
+                <br>
+                You can read more about my studies on the course in the education section.
+            </p>
         </div>
     </section>
     <section class="projects" id="projects">
@@ -99,7 +71,7 @@
             <h2>Projects</h2>
             <div class="single-slide">
                 <div class="slide">
-                    <img class="slide-img" src="img/modnikky.jpg" alt="trip house">
+                    <img class="slide-img" src="img/modnikky.jpg" alt="modnikky">
                     <div class="project-body">
                         <h3>Modnikky</h3>
                         <p class="-gray-color">SPA landing page of an online clothing store using React/Redux.</p>
@@ -120,7 +92,7 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <img class="slide-img" src="img/resume.jpg" alt="trip house">
+                    <img class="slide-img" src="img/resume.jpg" alt="resume">
                     <div class="project-body">
                         <h3>My resume</h3>
                         <p class="-gray-color">Landing page of my resume using Html, Css, JavaScript</p>
@@ -135,34 +107,25 @@
     <section class="education" id="education">
         <div class="_bounding-container">
             <h2>Education</h2>
-            <div class="work-experience-body">
-                <div class="info-wrap">
-                    <div class="description">
-                        <div class="description-info">
-                            <h3>Editing and video shooting courses "Photospot"</h3>
-                        </div>
-                        <div class="date -gray-color">Oct 2019 - Nov 2019</div>
-                    </div>
-                </div>
-                <div class="graph-line">
-                    <div class="graph-point point-1"></div>
-                    <div class="graph-point point-2"></div>
-                    <div class="graph-point point-3"></div>
-                </div>
-                <div class="info-wrap">
-                    <div class="description">
-                        <p class="date -blue-color">Oct 2021 – Jul 2022</p>
-                        <div class="description-info">
-                            <h3>Front-end courses "Intellect Fox"</h3>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p class="date -gray-color">Sept 2008 – Jun 2011</p>
-                        <div class="description-info">
-                            <h3>MGPTK Builders named after V.G. Kamensky</h3>
-                        </div>
-                    </div>
-                </div>
+            <div class="education-post">
+                <h3>Self-education</h3>
+                <p class="date -gray-color">Mar 2021 – Oct 2022</p>
+                <p class="post-text -gray-color">
+                    Half a year before the courses, I began to independently be interested in and study the front-end with
+                    the help of books, articles and videos on YouTube.
+                    I did this in order to make my studies more productive in future courses.
+                </p>
+            </div>
+            <div class="education-post">
+                <h3>Front-end courses "Intellect Fox"</h3>
+                <p class="date -gray-color">Oct 2021 – Jul 2022</p>
+                <p class="post-text -gray-color">
+                    In this course, I mastered the basics of HTML, CSS JavaScript, React, Redux. Learned how to work with
+                    the Git version control system. Worked with REST, webpack, npm, SASS, Pug, Styled Components, Redux-thunk,
+                    React-Router and others. I learned how to plan my time grammatically in order to manage to complete
+                    tasks on time.
+                </p>
+                <img src="img/certificate.png" alt="certificate">
             </div>
         </div>
     </section>

@@ -1,5 +1,15 @@
 import {contactLinks, languages, navigation, skills} from "./scripts/data.js";
 
+const aboutSection = document.getElementById('about')
+const skillsSection = document.getElementById('skills')
+const workExperienceSection = document.getElementById('work-experience')
+const projectsSection = document.getElementById('projects')
+const educationSection = document.getElementById('education')
+const languagesSection = document.getElementById('languages')
+const contactMeSection = document.getElementById('contact-me')
+console.log(aboutSection.offsetHeight + 1400)
+
+
 //Header
 
 const addActiveClassNav = (i) => {
@@ -11,11 +21,11 @@ const removeActiveClassNav = () => {
 
 window.addEventListener('scroll', function () {
 
-    if (pageYOffset < 784) {
+    if (pageYOffset < (skillsSection.clientHeight + 200)) {
         removeActiveClassNav()
         addActiveClassNav(0)
     }
-    if (pageYOffset > 785) {
+    if (pageYOffset > skillsSection.clientHeight + 200) {
         removeActiveClassNav()
         addActiveClassNav(1)
     }
