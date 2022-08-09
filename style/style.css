@@ -16,9 +16,11 @@ body {
     line-height: 28px;
     color: #120D0E;
 }
+
 a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
 }
@@ -116,6 +118,10 @@ header {
     border-bottom: 1px solid #3D3B3C;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .navLink {
     color: #BEBEBE;
     text-decoration: none;
@@ -130,9 +136,14 @@ header {
     color: #120D0E;
 }
 
+.mobile-navigation {
+    display: none;
+}
+
 .about {
     padding-top: 70px;
 }
+
 .about-body {
     display: flex;
     justify-content: space-between;
@@ -153,11 +164,28 @@ header {
     margin-bottom: 40px;
 }
 
+.about-buttons-mobile {
+    display: none;
+}
+
 .about-button {
     display: inline-block;
     background-color: #3A4576;
     padding: 14px 20px;
     text-decoration: none;
+    transition: .2s ease;
+}
+
+.about-button:hover {
+    background-color: #59639a;
+}
+
+.about-button:active {
+    background-color: #283159;
+}
+
+.about-button:not(:last-child) {
+    margin-right: 15px;
 }
 
 .about-photo {
@@ -181,7 +209,7 @@ header {
 }
 
 .-showAll {
-    max-height: 648px;
+    max-height: 1400px;
 }
 
 .skills-card {
@@ -214,6 +242,7 @@ header {
     width: 32px;
     height: 20px;
     transition: .2s ease;
+    cursor: pointer;
 }
 
 .rotate-180 {
@@ -225,9 +254,6 @@ header {
     font-size: 22px;
     line-height: 25px;
 }
-.work-experience h3 {
-    margin-bottom: 20px;
-}
 
 .-activeLink {
     color: #120D0E !important;
@@ -237,16 +263,18 @@ header {
 .projects {
     background-color: #FAFAFA;
 }
+
 .slick-slide {
-    display: flex!important;
-    align-items: center!important;
-    margin-bottom: 55px!important;
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 55px !important;
 }
+
 .slide-img {
     display: block;
     width: 50%;
     background-size: auto;
-    margin-right: 130px;
+    margin-right: 75px;
 }
 
 .slide p {
@@ -258,18 +286,22 @@ header {
     font-size: 22px;
     line-height: 25px;
 }
+
 .education-post:not(:last-child) {
     margin-bottom: 70px;
 }
+
 .date {
     margin-bottom: 20px;
     font-size: 16px;
 }
+
 .post-text {
     font-size: 19px;
     color: #494949;
 }
-.education-post img {
+
+.certificate-img {
     width: 80%;
     margin-top: 20px;
     border: 1px solid #f1874d;
@@ -279,82 +311,120 @@ header {
 .languages {
     background-color: #FAFAFA;
 }
+
 .languages-body {
     display: flex;
     justify-content: center;
 }
+
 .language-card {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .languages-flag {
-    width: 182px;
-    height: 182px;
+    width: 60%;
     margin-bottom: 24px;
 }
+
 .languages-title {
     margin-bottom: 8px;
 }
 
 .contact-me-body {
     display: flex;
+    justify-content: space-around;
 }
 
 .contact-img {
-    width: 412px;
-    height: 412px;
+    width: 40%;
     border-radius: 50%;
-    margin-right: 215px;
+    margin-right: 50px;
 }
+
 .contact-info-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    width: 40%;
 }
+
+.contact-links {
+    width: 50%;
+    margin-top: 50px;
+    text-align: center;
+}
+
 .contact-links a {
-    margin-right: 16px;
+
+    margin-right: 5px;
 }
-.contact-email-phone:not(:last-child) {
-    margin-bottom: 30px;
+
+.contact-link-img {
+    width: 20%;
 }
-.email {
-    text-decoration: underline;
-    color: #000000;
+
+.contact-item {
+    margin-bottom: 10px;
 }
-.phone {
+
+.contact-item-name {
+    margin-right: 7px;
+}
+
+.contact-item-link {
     display: block;
     text-decoration: underline;
     color: #000000;
 }
 
+
 @media (max-width: 1100px) {
     ._bounding-container {
         padding: 80px 32px;
     }
-    header {
+
+    body {
         font-size: 18px;
         line-height: 21px;
     }
+
     h1 {
         font-size: 42px;
         line-height: 40px;
         margin-bottom: 30px;
     }
+
+    h2 {
+        font-size: 42px;
+        line-height: 40px;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
     .about-info-text {
         font-size: 18px;
         line-height: 21px;
         margin-bottom: 30px;
     }
+
     .about-photo {
         width: 45%;
     }
+
     .about-button {
-        font-size: 18px;
-        line-height: 21px;
-        background-color: #3A4576;
         padding: 10px 15px;
-        text-decoration: none;
+    }
+
+    .project-body p {
+        margin-bottom: 30px;
+    }
+
+    .languages-flag {
+        margin-bottom: 15px;
     }
 }
 
@@ -362,5 +432,294 @@ header {
     .skills-card {
         width: 25%;
         min-height: 170px;
+    }
+
+    .slide-img {
+        margin-right: 55px;
+    }
+
+    .slide {
+        margin-bottom: 35px !important;
+    }
+
+    .slick-dots li button:before {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .education-post:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    ._bounding-container {
+        padding: 40px 32px;
+    }
+
+    .header-list {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    .about {
+        padding-top: 40px;
+    }
+
+    .about-body {
+        flex-wrap: wrap;
+    }
+
+    .about-info {
+        order: -1;
+    }
+
+    .about-info-text {
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    .about-photo {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    .about-buttons {
+        display: none;
+    }
+
+    .about-buttons-mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about-button {
+        padding: 5px 10px;
+    }
+
+    .skills-body {
+        margin: 0;
+    }
+
+    .skills-icon {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .arrow-down {
+        width: 20px;
+        height: 14px;
+    }
+
+    .date {
+        font-size: 13px;
+        line-height: 14px;
+        margin-bottom: 12px;
+    }
+
+    .post-text {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .project-body {
+        margin: 0;
+    }
+
+    .slide {
+        margin-bottom: 0 !important;
+    }
+
+    .slick-dots li {
+        width: 5px !important;
+        height: 5px !important;
+    }
+
+    .slick-dots li button:before {
+        width: 5px !important;
+        height: 5px !important;
+    }
+
+    .education-post:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .certificate-img {
+        width: 100%;
+    }
+
+    .contact-img {
+        margin-right: 10px;
+    }
+
+    .contact-links {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    ._bounding-container {
+        padding: 40px 8px;
+    }
+
+    ._bounding-container-header {
+        padding: 0 8px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    h3 {
+        font-size: 15px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+
+    .header-list {
+        display: none;
+    }
+
+    .burger-wrapper {
+        border-bottom: 1px solid #3D3B3C;
+        padding: 15px 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-item {
+        width: 20px;
+        height: 2px;
+        background-color: #000000;
+        transition: all .2s ease;
+    }
+
+    .burger-item:before,
+    .burger-item:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: #000000;
+        transition: all .2s ease;
+    }
+
+    .burger-item:before {
+        transform: translateY(-5px);
+    }
+
+    .burger-item:after {
+        transform: translateY(+5px);
+    }
+
+    .burger-item:not(:last-child) {
+        margin-bottom: 2px;
+    }
+
+    .burger-menu.active .burger-item {
+        transform: translateX(-3px);
+        background-color: transparent;
+    }
+
+    .burger-menu.active .burger-item:before {
+        transform: rotate(45deg);
+    }
+
+    .burger-menu.active .burger-item:after {
+        transform: rotate(-45deg);
+    }
+
+    .mobile-navigation li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .mobile-navigation li a {
+        color: black;
+    }
+
+    .mobile-navigation.visible {
+        display: block;
+        padding: 8px;
+    }
+
+    .about {
+        padding: 0;
+    }
+
+    .skills-card {
+        width: 50%;
+    }
+
+    .skills-icon {
+        max-width: 110px;
+        max-height: 110px;
+    }
+
+    .slick-slide {
+        flex-wrap: wrap !important;
+    }
+
+    .slide-img {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .project-body {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .contact-me-body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-info-wrapper {
+        width: 100%;
+        align-items: center;
+    }
+
+    .contact-img {
+        width: 61%;
+        margin: 0 0 30px 0;
+    }
+
+    .contact-item {
+        display: flex;
     }
 }

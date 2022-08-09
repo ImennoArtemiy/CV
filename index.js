@@ -1,147 +1,88 @@
-import {contactLinks, languages, navigation, skills} from "./scripts/data.js";
-
-const aboutSection = document.getElementById('about')
-const skillsSection = document.getElementById('skills')
-const workExperienceSection = document.getElementById('work-experience')
-const projectsSection = document.getElementById('projects')
-const educationSection = document.getElementById('education')
-const languagesSection = document.getElementById('languages')
-const contactMeSection = document.getElementById('contact-me')
-console.log(aboutSection.offsetHeight + 1400)
-
-
-//Header
-
-const addActiveClassNav = (i) => {
-    navElsArr[i].classList.add('-activeLink')
-}
-const removeActiveClassNav = () => {
-    navElsArr.map(i => i.classList.remove('-activeLink'))
-}
-
-window.addEventListener('scroll', function () {
-
-    if (pageYOffset < (skillsSection.clientHeight + 200)) {
-        removeActiveClassNav()
-        addActiveClassNav(0)
-    }
-    if (pageYOffset > skillsSection.clientHeight + 200) {
-        removeActiveClassNav()
-        addActiveClassNav(1)
-    }
-    if (pageYOffset > 1400) {
-        removeActiveClassNav()
-        addActiveClassNav(2)
-    }
-    if (pageYOffset > 2400) {
-        removeActiveClassNav()
-        addActiveClassNav(3)
-    }
-    if (pageYOffset > 3240) {
-        removeActiveClassNav()
-        addActiveClassNav(4)
-    }
-    if (pageYOffset > 4190) {
-        removeActiveClassNav()
-        addActiveClassNav(5)
-    }
-    if (pageYOffset > 4820) {
-        removeActiveClassNav()
-        addActiveClassNav(6)
-    }
-});
-
-const headerListEl = document.querySelector('.header-list')
-
-const handleNavClick = (event) => {
-    removeActiveClassNav()
-    event.target.classList.add('-activeLink')
-}
-
-const drawNavEl = (array) => {
-    headerListEl.innerHTML = array.map(item => {
-        return (
-            `<li class="header-list-item">
-                <a class="navLink" href="#${item.id}">${item.name}</a>
-            </li>`
-        )
-    }).join('')
-}
-drawNavEl(navigation)
-
-const navEl = document.getElementsByClassName('navLink')
-const navElsArr = Array.from(navEl)
-addActiveClassNav(0)
-
-navElsArr.map(item => item.addEventListener('click', handleNavClick))
-
-//Skills
-
-const skillsBodyEl = document.querySelector('.skills-body')
-const arrowDownBtn = document.querySelector('.arrow-down-link')
-
-const drawSkillCard = (array) => {
-    skillsBodyEl.innerHTML = array.map(item => {
-        return (
-            `<div class="skills-card">
-                <img class="skills-icon" src="./img/icons/${item.imgUrl}.png" alt="${item.name}">
-                <p class="skills-name">${item.name}</p>
-            </div>`
-        )
-    }).join('')
-}
-
-let openSkills = false;
-
-const handleClickArrow = () => {
-    !openSkills ? arrowDownBtn.classList.add('rotate-180') : arrowDownBtn.classList.remove('rotate-180')
-    !openSkills ? openSkills = true : openSkills = false
-    !openSkills ? drawSkillCard(skills.slice(0, 6)) : drawSkillCard(skills)
-    skillsBodyEl.classList.toggle('-showAll')
-    skillsBodyEl.scrollTop = skillsBodyEl.scrollHeight
-    !openSkills ?
-        arrowDownBtn.setAttribute('href', '#skills') :
-        arrowDownBtn.setAttribute('href', '#skills-title')
-}
-
-drawSkillCard(skills.slice(0, 6))
-arrowDownBtn.addEventListener('click', handleClickArrow)
-
+import {
+    contactsLinksData, contactsData,
+    educationData,
+    languages,
+    navigationData,
+    skillsData,
+    workExperienceData
+} from "./scripts/data.js";
+import {drawMobileNavigationElements, drawNavigationElements, setOnClickBurgerBtn} from "./scripts/header.js";
+import {drawSkillCard, setOnClickArrowBtn} from "./scripts/skillsBlock.js";
+import {drawWorkExperiencePost} from "./scripts/workExpBlock.js";
+import {drawEducationPost} from "./scripts/educationBlock.js";
+import drawLanguageCard from "./scripts/languagesBlock.js";
+import {drawContactItem, drawContactLink} from "./scripts/contactsBlock.js";
 
 $('.single-slide').slick({
+    infinite: true,
     dots: true,
+    prevArrow: false,
+    nextArrow: false,
 });
 
+// Header
+drawNavigationElements(navigationData)
+
+const navigationElements = Array.from(document.getElementsByClassName('navLink'))
+const addActiveClassInNavigation = (i) => {
+    navigationElements[i].classList.add('-activeLink')
+}
+const removeActiveClassInNavigation = () => {
+    navigationElements.map(i => i.classList.remove('-activeLink'))
+}
+
+addActiveClassInNavigation(0)
+
+window.addEventListener('scroll', function () {
+    const headerH = document.getElementById('header').clientHeight
+    const aboutH = document.getElementById('about').clientHeight
+    const skillsH = document.getElementById('skills').clientHeight
+    const workExH = document.getElementById('work-experience').clientHeight
+    const projectH = document.getElementById('projects').clientHeight
+    const educationH = document.getElementById('education').clientHeight
+    const languageH = document.getElementById('languages').clientHeight
+
+    if (pageYOffset < (aboutH + headerH)) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(0)
+    }
+    if (pageYOffset > aboutH - headerH) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(1)
+    }
+    if (pageYOffset > aboutH + skillsH - headerH) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(2)
+    }
+    if (pageYOffset > aboutH + skillsH + workExH - headerH) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(3)
+    }
+    if (pageYOffset > aboutH + skillsH + workExH + projectH - headerH) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(4)
+    }
+    if (pageYOffset > aboutH + skillsH + workExH + projectH + educationH - headerH) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(5)
+    }
+    if (pageYOffset > aboutH + skillsH + workExH + projectH + educationH + languageH - headerH) {
+        removeActiveClassInNavigation()
+        addActiveClassInNavigation(6)
+    }
+});
+// Burger
+setOnClickBurgerBtn()
+drawMobileNavigationElements(navigationData)
+//Skills
+drawSkillCard(skillsData.slice(0, 6))
+setOnClickArrowBtn()
+// WorkExperience
+drawWorkExperiencePost(workExperienceData)
+//Education
+drawEducationPost(educationData)
 // Languages
-
-const languagesBodyBlock = document.querySelector('.languages-body')
-
-const drawLanguageCard = (array) => {
-    languagesBodyBlock.innerHTML = array.map(item => {
-        return (
-            `<div class="language-card">
-                <img class="languages-flag" src="./img/flags/${item.name}.png" alt="${item.name} flag">
-                <h3 class="languages-title">${item.name}</h3>
-                <p class="languages-level">${item.level}</p>
-            </div>`
-        )
-    }).join('')
-}
-
 drawLanguageCard(languages)
-
 // Contacts
-
-const contactLinksBlock = document.querySelector('.contact-links')
-
-const drawContactLink = (array) => {
-    contactLinksBlock.innerHTML = array.map(item =>{
-        return (
-            `<a href=${item.link} target="_blank">
-                <img src=${item.img} alt=${item.alt}>
-            </a>`
-        )
-    }).join('')
-}
-
-drawContactLink(contactLinks)
+drawContactItem(contactsData)
+drawContactLink(contactsLinksData)

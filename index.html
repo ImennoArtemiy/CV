@@ -15,9 +15,15 @@
 </head>
 <body>
 <header id="header">
-    <div class="_bounding-container-header">
+    <nav class="_bounding-container-header">
         <ul class="header-list"></ul>
-    </div>
+        <div class="burger-wrapper">
+            <div class="burger-menu">
+                <div class="burger-item"></div>
+            </div>
+        </div>
+    </nav>
+    <ul class="mobile-navigation" id="mobile-navigation"></ul>
 </header>
 <main>
     <section class="about" id="about">
@@ -36,12 +42,20 @@
                     </div>
                     <div class="about-buttons">
                         <a class="about-button -white-color"
-                           href="https://drive.google.com/uc?export=download&id=1ZtaLNrHAa9syTlt1wkJnqsqMzf30RmRK">Download
-                            CV</a>
+                           href="https://drive.google.com/uc?export=download&id=1HPRmr7gXE9rA25anL7BNIG9D6P_nSwAQ">
+                            Download CV
+                        </a>
                         <a class="about-button -white-color" href="#contact-me">Contact me</a>
                     </div>
                 </div>
-                <img class="about-photo" src="img/my-photo.jpg" alt="my photo">
+                <img class="about-photo" src="img/my-photo.png" alt="my photo">
+                <div class="about-buttons-mobile">
+                    <a class="about-button -white-color"
+                       href="https://drive.google.com/uc?export=download&id=1HPRmr7gXE9rA25anL7BNIG9D6P_nSwAQ">
+                        Download CV
+                    </a>
+                    <a class="about-button -white-color" href="#contact-me">Contact me</a>
+                </div>
             </div>
         </div>
     </section>
@@ -57,13 +71,7 @@
     <section class="work-experience" id="work-experience">
         <div class="_bounding-container">
             <h2>Work experience</h2>
-            <p class="date -gray-color">Oct 2021 – Jul 2022</p>
-            <h3>Front-end courses "Intellect Fox"</h3>
-            <p class="post-text -gray-color">
-                I was a student on the course. During my studies, I created several projects, which you can see in the Projects section.
-                <br>
-                You can read more about my studies on the course in the education section.
-            </p>
+            <div class="work-experience-body"></div>
         </div>
     </section>
     <section class="projects" id="projects">
@@ -92,7 +100,7 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <img class="slide-img" src="img/resume.jpg" alt="resume">
+                    <img class="slide-img" src="img/resume.png" alt="resume">
                     <div class="project-body">
                         <h3>My resume</h3>
                         <p class="-gray-color">Landing page of my resume using Html, Css, JavaScript</p>
@@ -107,26 +115,8 @@
     <section class="education" id="education">
         <div class="_bounding-container">
             <h2>Education</h2>
-            <div class="education-post">
-                <h3>Self-education</h3>
-                <p class="date -gray-color">Mar 2021 – Oct 2022</p>
-                <p class="post-text -gray-color">
-                    Half a year before the courses, I began to independently be interested in and study the front-end with
-                    the help of books, articles and videos on YouTube.
-                    I did this in order to make my studies more productive in future courses.
-                </p>
-            </div>
-            <div class="education-post">
-                <h3>Front-end courses "Intellect Fox"</h3>
-                <p class="date -gray-color">Oct 2021 – Jul 2022</p>
-                <p class="post-text -gray-color">
-                    In this course, I mastered the basics of HTML, CSS JavaScript, React, Redux. Learned how to work with
-                    the Git version control system. Worked with REST, webpack, npm, SASS, Pug, Styled Components, Redux-thunk,
-                    React-Router and others. I learned how to plan my time grammatically in order to manage to complete
-                    tasks on time.
-                </p>
-                <img src="img/certificate.png" alt="certificate">
-            </div>
+            <div class="education-body"></div>
+            <img class="certificate-img" src="./img/certificate.png" alt="certificate">
         </div>
     </section>
     <section class="languages" id="languages">
@@ -135,31 +125,23 @@
             <div class="languages-body"></div>
         </div>
     </section>
-    <section class="contact-me" id="contact-me">
-        <div class="_bounding-container">
-            <h2>Contact me</h2>
-            <div class="contact-me-body">
-                <img class="contact-img" src="./img/neska.jpg" alt="I am">
-                <div class="contact-info-wrapper">
-                    <div class="contact-links"></div>
-                    <div class="contact-email-phone">
-                        Email: <br>
-                        <a class="email" href="mailto:imennoartemiy@gmail.com">imennoartemiy@gmail.com</a>
-                        <br>
-                        <br>
-                        Phone: <br>
-                        <a class="phone" href="tel:+375298704726">+375298704726</a>
-                    </div>
-                </div>
+</main>
+<footer class="contact-me" id="contact-me">
+    <div class="_bounding-container">
+        <h2>Contact me</h2>
+        <div class="contact-me-body">
+            <img class="contact-img" src="./img/neska.jpg" alt="I am">
+            <div class="contact-info-wrapper -gray-color">
+                <div class="contacts-items"></div>
+                <div class="contact-links"></div>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</footer>
 
 <script src="libs/jquery.min.js"></script>
 <script type="text/javascript" src="libs/slick/slick.min.js"></script>
 <script type="module" src="index.js"></script>
-<script type="module" src="scripts/data.js"></script>
 
 </body>
 </html>
