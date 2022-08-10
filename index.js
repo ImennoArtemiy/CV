@@ -16,8 +16,12 @@ import {drawContactItem, drawContactLink} from "./scripts/contactsBlock.js";
 $('.single-slide').slick({
     infinite: true,
     dots: true,
-    prevArrow: false,
-    nextArrow: false,
+    prevArrow: `<div class="prev-btn-slick btn-slick">
+                    <p><</p>
+                </div>`,
+    nextArrow: `<div class="next-btn-slick btn-slick">
+                    <p>></p>
+                </div>`,
 });
 
 // Header
@@ -71,7 +75,7 @@ window.addEventListener('scroll', function () {
         addActiveClassInNavigation(6)
     }
 });
-// Burger
+
 setOnClickBurgerBtn()
 drawMobileNavigationElements(navigationData)
 //Skills

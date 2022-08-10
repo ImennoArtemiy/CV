@@ -267,7 +267,6 @@ header {
 .slick-slide {
     display: flex !important;
     align-items: center !important;
-    margin-bottom: 55px !important;
 }
 
 .slide-img {
@@ -279,6 +278,45 @@ header {
 
 .slide p {
     margin-bottom: 72px;
+}
+
+.btn-slick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3A4576;
+    color: #FFFFFF;
+    box-shadow: 0 5px 7px #3A4576;
+    text-align: center;
+    font-size: 24px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+.btn-slick:hover {
+    background-color: #59639a;
+}
+
+.btn-slick:active {
+    background-color: #283159;
+}
+
+.slick-dots {
+    display: none !important;
+}
+
+.prev-btn-slick {
+    left: -20px;
+}
+
+.next-btn-slick {
+    right: -20px;
 }
 
 .education {
@@ -442,6 +480,22 @@ header {
         margin-bottom: 35px !important;
     }
 
+    .btn-slick {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .prev-btn-slick {
+        top: 35%;
+        left: -12px;
+    }
+
+    .next-btn-slick {
+        right: -12px;
+    }
+
     .slick-dots li button:before {
         width: 10px !important;
         height: 10px !important;
@@ -550,8 +604,11 @@ header {
         margin: 0;
     }
 
-    .slide {
-        margin-bottom: 0 !important;
+    .btn-slick {
+        display: none;
+    }
+    .slick-dots {
+        display: block !important;
     }
 
     .slick-dots li {
@@ -701,7 +758,11 @@ header {
     .project-body {
         width: 100%;
         text-align: center;
-        margin-top: 20px;
+        margin: 20px 0 0 0;
+    }
+
+    .slick-slide {
+        margin-bottom: 10px !important;
     }
 
     .contact-me-body {
@@ -721,5 +782,6 @@ header {
 
     .contact-item {
         display: flex;
+        font-size: 13px;
     }
 }
