@@ -6,7 +6,12 @@ import {
     skillsData,
     workExperienceData
 } from "./scripts/data.js";
-import {drawMobileNavigationElements, drawNavigationElements, setOnClickBurgerBtn} from "./scripts/header.js";
+import {
+    drawMobileNavigationElements,
+    drawNavigationElements,
+    mobileNavigationBlock,
+    setOnClickBurgerBtn
+} from "./scripts/header.js";
 import {drawSkillCard, setOnClickArrowBtn} from "./scripts/skillsBlock.js";
 import {drawWorkExperiencePost} from "./scripts/workExpBlock.js";
 import {drawEducationPost} from "./scripts/educationBlock.js";
@@ -69,6 +74,7 @@ window.addEventListener('scroll', function () {
         removeActiveClassInNavigation()
         addActiveClassInNavigation(6)
     }
+    mobileNavigationBlock.classList.remove('visible')
 });
 
 setOnClickBurgerBtn()

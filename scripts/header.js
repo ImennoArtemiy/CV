@@ -11,7 +11,7 @@ export const drawNavigationElements = (array) => {
     }).join('')
 }
 
-const mobileNavigationBlock = document.getElementById('mobile-navigation')
+export const mobileNavigationBlock = document.getElementById('mobile-navigation')
 
 export const drawMobileNavigationElements = (array) => {
     mobileNavigationBlock.innerHTML = array.map(item => {
