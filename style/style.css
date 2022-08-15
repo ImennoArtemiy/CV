@@ -17,6 +17,10 @@ body {
     color: #120D0E;
 }
 
+main {
+    width: 100%;
+}
+
 a {
     text-decoration: none;
 }

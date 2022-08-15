@@ -16,6 +16,7 @@ import {drawContactItem, drawContactLink} from "./scripts/contactsBlock.js";
 $('.single-slide').slick({
     infinite: true,
     dots: true,
+    arrows: false
 });
 
 // Header
