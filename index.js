@@ -16,12 +16,6 @@ import {drawContactItem, drawContactLink} from "./scripts/contactsBlock.js";
 $('.single-slide').slick({
     infinite: true,
     dots: true,
-    prevArrow: `<div class="prev-btn-slick btn-slick">
-                    <p><</p>
-                </div>`,
-    nextArrow: `<div class="next-btn-slick btn-slick">
-                    <p>></p>
-                </div>`,
 });
 
 // Header
