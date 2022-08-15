@@ -280,6 +280,10 @@ header {
     margin-bottom: 72px;
 }
 
+.slick-dots li:not(:last-child) {
+    margin-right: 30px !important;
+}
+
 .slick-dots li button:before {
     margin-top: 30px !important;
     width: 10px !important;
@@ -550,6 +554,7 @@ header {
         margin: 0;
     }
 
+
     .slick-dots {
         display: block !important;
     }
@@ -559,7 +564,12 @@ header {
         height: 5px !important;
     }
 
+    .slick-dots li:not(:last-child) {
+        margin-right: 30px !important;
+    }
+
     .slick-dots li button:before {
+        margin-top: 0 !important;
         width: 5px !important;
         height: 5px !important;
     }
@@ -622,8 +632,8 @@ header {
     }
 
     .burger-item {
-        width: 20px;
-        height: 2px;
+        width: 30px;
+        height: 3px;
         background-color: #000000;
         transition: all .2s ease;
     }
@@ -632,18 +642,18 @@ header {
     .burger-item:after {
         content: '';
         position: absolute;
-        width: 20px;
-        height: 2px;
+        width: 30px;
+        height: 3px;
         background-color: #000000;
         transition: all .2s ease;
     }
 
     .burger-item:before {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
     }
 
     .burger-item:after {
-        transform: translateY(+5px);
+        transform: translateY(+8px);
     }
 
     .burger-item:not(:last-child) {
@@ -663,12 +673,19 @@ header {
         transform: rotate(-45deg);
     }
 
-    .mobile-navigation li:not(:last-child) {
-        margin-bottom: 10px;
+    .mobile-navigation {
+        border-bottom: 1px solid black;
+        margin: 0 8px;
+    }
+
+    .mobile-navigation li {
+        margin: 20px 0;
     }
 
     .mobile-navigation li a {
         color: black;
+        font-size: 24px;
+        line-height: 36px;
     }
 
     .mobile-navigation.visible {
