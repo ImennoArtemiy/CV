@@ -10,6 +10,7 @@ import {
     drawMobileNavigationElements,
     drawNavigationElements,
     mobileNavigationBlock,
+    burgerBtn,
     setOnClickBurgerBtn
 } from "./scripts/header.js";
 import {drawSkillCard, setOnClickArrowBtn} from "./scripts/skillsBlock.js";
@@ -75,6 +76,7 @@ window.addEventListener('scroll', function () {
         addActiveClassInNavigation(6)
     }
     mobileNavigationBlock.classList.remove('visible')
+    burgerBtn.classList.remove('active')
 });
 
 setOnClickBurgerBtn()

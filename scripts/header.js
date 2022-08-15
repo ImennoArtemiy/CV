@@ -1,5 +1,5 @@
 const headerListBlock = document.querySelector('.header-list')
-const burgerBtn = document.querySelector('.burger-menu')
+export const burgerBtn = document.querySelector('.burger-menu')
 
 export const drawNavigationElements = (array) => {
     headerListBlock.innerHTML = array.map(item => {
